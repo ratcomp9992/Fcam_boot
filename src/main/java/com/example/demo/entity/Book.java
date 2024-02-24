@@ -9,7 +9,7 @@ import javax.persistence.*;
 public class Book {
     @Id // PK
     @GeneratedValue(strategy = GenerationType.IDENTITY) // Auto-increament
-    private int id;     // 일련번호
+    private Long id;     // 일련번호
 
     @Column(length = 50, nullable = false)
     private String title;
