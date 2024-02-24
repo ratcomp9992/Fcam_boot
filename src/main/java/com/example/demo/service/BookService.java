@@ -53,7 +53,11 @@ public class BookService {
     }
 
     // 데이터 삭제하기
-    public void getByDelete(Long id){
+    public void getByDelete(Long id) {
         repository.deleteById(id);
+    }
+
+    public Book findByTitleAndName(String title, String name) {
+        return repository.findByTitleName(title, name);
     }
 }

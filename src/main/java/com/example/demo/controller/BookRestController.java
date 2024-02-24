@@ -29,6 +29,11 @@ public class BookRestController {
         }
     }
 
+    @GetMapping("/books/{title}/{name}")
+    public Book findByTitleAndName(@PathVariable String title, @PathVariable String name) {
+        return service.findByTitleAndName(title, name);
+    }
+
     @PostMapping("/books")  // JSON ---> @RequestBody ----> OBJECT
     public Book register(@RequestBody Book book) {
         return service.register(book);
